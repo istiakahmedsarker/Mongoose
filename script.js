@@ -3,5 +3,7 @@ const User = require("./User")
 
 mongoose.connect("mongodb://localhost/testdb")
 
-const user = new User({name: "John", age: 26})
-user.save().then(()=> console.log("USer Saved"))
+async function run(){
+    const user = new User({name: "John", age: 26})
+    await user.save()
+}
