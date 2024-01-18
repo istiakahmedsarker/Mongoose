@@ -3,6 +3,8 @@ const User = require("./User")
 
 mongoose.connect("mongodb://localhost/testdb")
 
+
+
 run()
 async function run() {
     const user = await User.create(
